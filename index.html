@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Android Generator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info px-2">
+        <a class="navbar-brand">Android Helpers</a>
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#arrays-card">Arrays <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu-card" tabindex="-1" aria-disabled="true">Menu</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid pt-2">
+        <div class="card mb-3 shadow-sm rounded-0" id="arrays-card">
+            <div class="card-header d-flex justify-content-between rounded-0">
+                Arrays Generator
+                <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse"
+                    data-bs-target=".multi-collapse-1" aria-expanded="false"
+                    aria-controls="array-gen-body array-gen-footer"><i class="fa fa-caret-down"></i></button>
+            </div>
+            <div class="card-body collapse multi-collapse-1" id="array-gen-body">
+                <h6>Generate String Array</h6>
+                <form id="array-form" method="post" action="">
+                    <div class="form-group mb-3">
+                        <label for="array">Array Text</label>
+                        <textarea id="array" class="form-control" name="array" rows="3"
+                            placeholder="entry-1, entry 2,entry 3" required></textarea>
+                        <small>Array Entries seperated by comma (,)</small>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="radio" class="form-check-input" id="small" name="capitalise" value="lowercase"
+                            checked>
+                        <label class="form-check-label" for="small">lower case</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="radio" class="form-check-input" id="capitalise-first" name="capitalise"
+                            value="capitalise-first">
+                        <label class="form-check-label" for="capitalise-first">Capitalise first letter</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="radio" class="form-check-input" id="capitalise-each" name="capitalise"
+                            name="capitalise-each">
+                        <label class="form-check-label" for="capitalise-each">Capitalise Each Word</label>
+                    </div>
+                    <input type="submit" class="btn btn-outline-success" value="Generate Array">
+                </form>
+                <div class="pb-3 pt-5 d-non" id="generated-array-div">
+                    <div class="form-group">
+                        <label for="generated-array">Generate Array</label>
+                        <textarea id="generated-array" class="form-control" name="" rows="6"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer collapse multi-collapse-1 rounded-0" id="array-gen-footer">
+                by Kennedy Kiio
+            </div>
+        </div>
+        <div class="card mb-3 shadow-sm rounded-0" id="menu-card">
+            <div class="card-header d-flex justify-content-between rounded-0">
+                Menu Generator
+                <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse"
+                    data-bs-target=".multi-collapse" aria-expanded="false"
+                    aria-controls="menu-gen-body menu-gen-footer"><i class="fa fa-caret-down"></i></button>
+            </div>
+            <div class="card-body collapse multi-collapse" id="menu-gen-body">
+                <h6>Generate Menu</h6>
+                <form id="menu-form" method="post" action="">
+                    <div class="form-group mb-3">
+                        <label for="menu-items">Menu Items</label>
+                        <textarea id="menu-items" class="form-control" name="menu-items" rows="3"
+                            placeholder="menu 1,menu-2, menu-3" required></textarea>
+                        <small>Menu items seperated by comma (,)</small>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="radio" class="form-check-input" id="small-m" name="capitalise-m" value="lowercase"
+                            checked>
+                        <label class="form-check-label" for="small-m">lower case</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="radio" class="form-check-input" id="capitalise-first-m" name="capitalise-m"
+                            value="capitalise-first">
+                        <label class="form-check-label" for="capitalise-first-m">Capitalise first letter</label>
+                    </div>
+                    <input type="submit" class="btn btn-outline-success" value="Generate Menu">
+                </form>
+                <div class="row">
+                    <div class="pb-3 pt-5 col-md-6" id="generated-menu-div">
+                        <div class="form-group">
+                            <label for="generated-menu">Generate Menu XMl</label>
+                            <textarea id="generated-menu" class="form-control" name="" rows="6"></textarea>
+                        </div>
+                    </div>
+                    <div class="pb-3 pt-5 col-md-6" id="generated-menu-div-java">
+                        <div class="form-group">
+                            <label for="generated-menu-java">Generate Menu Java</label>
+                            <textarea id="generated-menu-java" class="form-control" name="" rows="6"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer collapse multi-collapse rounded-0" id="menu-gen-footer">
+                by Kennedy Kiio
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
